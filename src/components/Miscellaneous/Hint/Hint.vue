@@ -49,15 +49,15 @@ export default {
       },
     };
   },
-  
+
   methods: {
     showHint(value) {
       if (this.showOnOverflowOnly) {
         const element = this.$slots.default[0].elm;
-  
+
         if (element.scrollWidth > element.clientWidth || element.scrollHeight > element.clientHeight)
           this.$set(this.state, 'showHint', value);
-        
+
         return;
       }
 
@@ -81,8 +81,9 @@ export default {
       color: var(--color-white);
       padding: 9px 20px;
       overflow: hidden;
-      white-space: nowrap;
       border-radius: 20px;
+      width: max-content;
+      white-space: pre-line;
     }
 
     @mixin pb-hint-bottom {
