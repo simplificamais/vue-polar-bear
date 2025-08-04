@@ -26,6 +26,7 @@ export default {
     value: { type: [String, Date], default: '' },
     placeholder: { type: String, default: '' },
     onValidate: { type: Function, default: null },
+    timeOutValue: { type: Number, default: 1000 },
     color: {
       type: String,
       default: 'gray-20',
@@ -73,7 +74,7 @@ export default {
           this.$emit('validation', {
             validation: this.state.validation,
           });
-        }, 1000);
+        }, this.timeOutValue);
       },
     },
 
@@ -111,7 +112,7 @@ export default {
         this.$emit('validation', {
           validation: this.state.validation,
         });
-      }, 1000);
+      }, this.timeOutValue);
       this.state.typeInput = 'date';
     },
 
