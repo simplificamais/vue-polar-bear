@@ -2,7 +2,7 @@
   <div class="pb-radio-with-icon-container">
     <div
       class="radio-box"
-      :class="getCheckboxClass()"
+      :class="getRadioClass()"
       @click="() => (checked = !checked)"
       :style="`border: 1px solid ${getColor()};`"
     >
