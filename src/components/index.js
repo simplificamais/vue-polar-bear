@@ -51,7 +51,6 @@ export { default as PbRadialBar } from './DataVisualization/RadialBar/RadialBar.
 
 // ? Inputs
 export { default as PbCheckbox } from './Inputs/Checkbox/Checkbox.vue';
-export { default as PbCheckboxCircle } from './Inputs/CheckboxCircle/CheckboxCircle.vue';
 export { default as PbQuantitySelector } from './Inputs/QuantitySelector/QuantitySelector.vue';
 export { default as PbSelect } from './Inputs/Select/Select.vue';
 export { default as PbTaxIdInput } from './Inputs/TaxIdInput/TaxIdInput.vue';
@@ -64,6 +63,7 @@ export { default as PbTextArea } from './Inputs/TextArea/TextArea.vue';
 export { default as PbNumberInput } from './Inputs/NumberInput/NumberInput.vue';
 export { default as PbToggleSwitch } from './Inputs/ToggleSwitch/ToggleSwitch.vue';
 export { default as PbRadio } from './Inputs/Radio/Radio.vue';
+export { default as PbRadioWithIcon } from './Inputs/PbRadioWithIcon/PbRadioWithIcon.vue';
 export { default as PbThreeStateCheckbox } from './Inputs/ThreeStateCheckbox/ThreeStateCheckbox.vue';
 export { default as PbCheckboxTree } from './Inputs/CheckboxTree/CheckboxTreeController.vue';
 export { default as PbAudioInput } from './Inputs/AudioInput/AudioInput.vue';

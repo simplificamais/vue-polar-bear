@@ -1,7 +1,7 @@
 <template>
-  <div class="pb-checkbox-circle-container">
+  <div class="pb-radio-with-icon-container">
     <div
-      class="check-box"
+      class="radio-box"
       :class="getCheckboxClass()"
       @click="() => (checked = !checked)"
       :style="`border: 1px solid ${getColor()};`"
@@ -28,7 +28,7 @@ import PbIcon from '@pb/Miscellaneous/Icon/Icon';
 import { validateColor } from '@pb/utils/validator';
 
 export default {
-  name: 'PbCheckboxCircle',
+  name: 'PbRadioWithIcon',
   components: {
     PbIcon,
   },
@@ -63,8 +63,8 @@ export default {
   },
 
   methods: {
-    getCheckboxClass() {
-      return this.disabled ? 'check-box-disabled' : '';
+    getRadioClass() {
+      return this.disabled ? 'radio-box-disabled' : '';
     },
 
     getColor() {
@@ -81,10 +81,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pb-checkbox-circle-container {
+.pb-radio-with-icon-container {
   display: flex;
   
-  .check-box {
+  .radio-box {
     width: 20px;
     height: 20px;
     display: flex;
@@ -93,7 +93,7 @@ export default {
     border-radius: 50px;
     cursor: pointer;
 
-    &.check-box-disabled {
+    &.radio-box-disabled {
       cursor: not-allowed;
       background-color: #E2E5E8;
       border: 1px solid #B2B6B9;
