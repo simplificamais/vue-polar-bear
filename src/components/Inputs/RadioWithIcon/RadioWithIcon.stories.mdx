@@ -1,0 +1,68 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import PbRadioWithIcon from './RadioWithIcon.vue';
+import { colors } from '@pb/utils/constants.js';
+
+<Meta
+ title="Components/Inputs/PbRadioWithIcon"
+ component={PbRadioWithIcon}
+ argTypes={{
+  value: {
+    type: 'boolean',
+    defaultValue: false,
+  },
+  color: {
+    control: { type: 'select', options: [ ...colors ] },
+    defaultValue: 'primary',
+  },
+  hexColor: {
+    type: 'string',
+    defaultValue: ''
+  },
+  checkedIconColor: {
+    control: { type: 'select', options: [ ...colors ] },
+    defaultValue: 'white',
+  },
+  disabled: {
+    type: 'boolean',
+    defaultValue: false,
+  },
+ }}
+/>
+
+export const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { PbRadioWithIcon },
+  template: `
+    <PbRadioWithIcon
+      v-model="value"
+      :color="color"
+      :hex-color="hexColor"
+      :checked-icon-color="checkedIconColor"
+      :disabled="disabled"
+    />
+  `
+});
+
+# **PbRadioWithIcon**
+### The `PbRadioWithIcon` component can be used to select or check one option.
+
+### Purpose and Use case
+
+It is a simple checkbox field that can be used to provide a way to select one or more option like confirm terms and conditions,
+or select items for exclusion.
+
+The component works with v-model to emit the checked value.
+
+## Examples
+
+### Default
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
