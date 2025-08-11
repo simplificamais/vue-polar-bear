@@ -30,6 +30,10 @@ import { colors, buttonStyles } from '@pb/utils/constants.js';
       },
       defaultValue: 'large',
     },
+    radius: {
+      type: 'string',
+      defaultValue: '20px',
+    },
     disableHover: {
       type: 'boolean',
       defaultValue: false,
@@ -89,6 +93,7 @@ export const Template = (args, { argTypes }) => ({
       :color="color"
       :button-style="buttonStyle"
       :button-size="buttonSize"
+      :radius="radius"
       :disable-hover="disableHover"
       :disabled="disabled"
       :loading="loading"

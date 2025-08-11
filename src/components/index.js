@@ -51,6 +51,7 @@ export { default as PbRadialBar } from './DataVisualization/RadialBar/RadialBar.
 
 // ? Inputs
 export { default as PbCheckbox } from './Inputs/Checkbox/Checkbox.vue';
+export { default as PbCheckboxCircle } from './Inputs/CheckboxCircle/CheckboxCircle.vue';
 export { default as PbQuantitySelector } from './Inputs/QuantitySelector/QuantitySelector.vue';
 export { default as PbSelect } from './Inputs/Select/Select.vue';
 export { default as PbTaxIdInput } from './Inputs/TaxIdInput/TaxIdInput.vue';

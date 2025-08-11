@@ -1,7 +1,7 @@
 <template>
   <button
     :class="buttonClasses"
-    :style="`${buttonHeight} ${buttonColor}`"
+    :style="`${buttonHeight} ${buttonColor} ${buttonRadius}`"
     :disabled="disabled || loading"
   >
     <div
@@ -71,6 +71,11 @@ export default {
         'medium',
         'large',
       ].includes(style),
+    },
+
+    radius: {
+      type: String,
+      default: '20px',
     },
 
     disableHover: {
@@ -165,6 +170,10 @@ export default {
       }
     },
 
+    buttonRadius() {
+      return `border-radius: ${this.radius};`;
+    },
+
     labelClass() {
       switch (this.buttonSize) {
         case 'medium':
@@ -202,7 +211,6 @@ export default {
 
 <style lang="scss" scoped>
 .pb-button {
-  border-radius: 20px;
   font-size: 14px !important;
   font-weight: 600 !important;
   text-transform: unset !important;
