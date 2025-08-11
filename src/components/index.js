@@ -63,6 +63,7 @@ export { default as PbTextArea } from './Inputs/TextArea/TextArea.vue';
 export { default as PbNumberInput } from './Inputs/NumberInput/NumberInput.vue';
 export { default as PbToggleSwitch } from './Inputs/ToggleSwitch/ToggleSwitch.vue';
 export { default as PbRadio } from './Inputs/Radio/Radio.vue';
+export { default as PbRadioWithIcon } from './Inputs/PbRadioWithIcon/PbRadioWithIcon.vue';
 export { default as PbThreeStateCheckbox } from './Inputs/ThreeStateCheckbox/ThreeStateCheckbox.vue';
 export { default as PbCheckboxTree } from './Inputs/CheckboxTree/CheckboxTreeController.vue';
 export { default as PbAudioInput } from './Inputs/AudioInput/AudioInput.vue';
