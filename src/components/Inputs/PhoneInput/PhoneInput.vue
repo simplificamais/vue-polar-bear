@@ -33,6 +33,7 @@ export default {
     value: { type: String, default: '' },
     color: { type: String, default: 'gray-20', validator: color => validateColor(color) },
     background: { type: String, default: 'transparent' },
+    validateDdi: { type: Boolean, default: false },
 
     inputStyle: {
       type: String,
@@ -90,11 +91,13 @@ export default {
   methods: {
     validatePhone() {
       let errorMessage = '';
+      const minimumLength = this.validateDdi ? 12 : 10;
+      const rawNumber = this.phoneInput ? this.phoneInput.replace(/[^\d]/g, '') : '';
 
       if (this.required && (!this.phoneInput || this.phoneInput.length === 0))
         errorMessage = 'Este campo é obrigatório!';
-      else if (this.phoneInput.length < 10)
-        errorMessage = 'Este campo precisa ter no mínimo 10 dígitos!';
+      else if (rawNumber.length < minimumLength)
+        errorMessage = `Este campo precisa ter no mínimo ${minimumLength} dígitos!`;
 
       this.updateValidationFiled({ message: errorMessage });
     },
