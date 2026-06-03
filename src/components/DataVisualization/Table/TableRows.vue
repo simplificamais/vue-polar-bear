@@ -90,7 +90,17 @@
                 </p>
               </PbHint>
 
-              <p v-if="column.secondaryValue" class="pb-sm secondary-value">{{ column.secondaryValue }}</p>
+              <PbHint
+                v-if="column.secondaryValue"
+                :hint-text="column.secondaryValue"
+                :disabled="!ellipsisOnOverflow"
+                :show-on-overflow-only="true"
+                position="bottom-right"
+              >
+                <p class="pb-sm secondary-value" :class="{ 'ellipsis-on-overflow': ellipsisOnOverflow }">
+                  {{ column.secondaryValue }}
+                </p>
+              </PbHint>
             </div>
 
             <div
@@ -209,7 +219,17 @@
                   </p>
                 </PbHint>
 
-                <p v-if="column.secondaryValue" class="pb-sm secondary-value">{{ column.secondaryValue }}</p>
+                <PbHint
+                  v-if="column.secondaryValue"
+                  :hint-text="column.secondaryValue"
+                  :disabled="!ellipsisOnOverflow"
+                  :show-on-overflow-only="true"
+                  position="bottom-right"
+                >
+                  <p class="pb-sm secondary-value" :class="{ 'ellipsis-on-overflow': ellipsisOnOverflow }">
+                    {{ column.secondaryValue }}
+                  </p>
+                </PbHint>
               </div>
 
               <div>
