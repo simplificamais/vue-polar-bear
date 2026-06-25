@@ -23,8 +23,8 @@
 
 <script>
 import { validateColor } from '@pb/utils/validator';
-import { isCpf, isCnpj } from 'adapcon-utils-js';
-import { documentTypesData } from './documentTypes';
+import { isCpf } from 'adapcon-utils-js';
+import { documentTypesData, isAlphanumericCnpj } from './documentTypes';
 
 export default {
   name: 'PbTaxIdInput',
@@ -93,7 +93,8 @@ export default {
         const formatDocumentValue = document
           .replace(/[^\w\s]/gi, '')
           .replace(/\s+/g, '')
-          .trim();
+          .trim()
+          .toUpperCase();
         this.$emit('input', formatDocumentValue);
       },
     },
@@ -161,7 +162,7 @@ export default {
 
       const validations = {
         cpf: isCpf(documentToValidate),
-        cnpj: isCnpj(documentToValidate),
+        cnpj: isAlphanumericCnpj(documentToValidate),
       };
 
       if (!documentToValidate) {
