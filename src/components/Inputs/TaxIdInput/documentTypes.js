@@ -33,7 +33,7 @@ export function isAlphanumericCnpj(value) {
   if (/^(.)\1+$/.test(cnpj)) return false;
   if (!/^\d$/.test(cnpj[12]) || !/^\d$/.test(cnpj[13])) return false;
 
-  const charToNum = c => (/\d/.test(c) ? parseInt(c, 10) : c.charCodeAt(0) - 55);
+  const charToNum = c => c.charCodeAt(0) - 48;
 
   const calcDigit = (str, weights) => {
     const sum = str.split('').reduce((acc, c, i) => acc + charToNum(c) * weights[i], 0);
